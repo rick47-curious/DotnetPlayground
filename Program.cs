@@ -18,6 +18,23 @@ namespace DotnetPlayground
 
             //Not a polymorph
             polymorphicObj.EmptyCaller();
+
+            Console.WriteLine("*****************************************************");
+            MyInterface intObj = new ChildTwo();
+
+            MyAbstractions absObj = new ChildTwo();
+
+            intObj.Caller();
+            intObj.DemoMethod();
+
+            absObj.GetNum = 30;
+            Console.WriteLine("Before : "+absObj.GetNum);
+
+            absObj.GetNum = 50;
+            Console.WriteLine("After: "+absObj.GetNum);
+
+            absObj.PrintStatement();
+            absObj.Print();
             
         }
     }
