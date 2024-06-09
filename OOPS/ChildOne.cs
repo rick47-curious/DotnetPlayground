@@ -8,7 +8,7 @@ namespace DotnetPlayground
 {
     public class ChildOne : ParentClass
     {
-        public ChildOne() 
+        public ChildOne(int count,string name):base(count,name)
         {
             Console.WriteLine("Access parent property: "+MyProperty);
         }
@@ -38,5 +38,6 @@ namespace DotnetPlayground
         {
             Console.WriteLine($"Hello Mr/Ms {name}");
         }
+
     }
 }
