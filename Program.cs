@@ -1,4 +1,5 @@
 ﻿
+using DotnetPlayground.DSA;
 using DotnetPlayground.OOPS;
 
 namespace DotnetPlayground 
@@ -8,54 +9,65 @@ namespace DotnetPlayground
 
         public static void Main()
         {
-            ChildOne childOne = new(1,"Ram");
-            
-            childOne.GetValues();
+            //ChildOne childOne = new(1,"Ram");
 
-            Console.WriteLine("Child Property value: " + childOne.BaseName);
-            childOne.CallMethod();
-            childOne.CallMethod("Henry");
+            //childOne.GetValues();
 
-            ParentClass polymorphicObj = new ChildOne(2,"Ramesh");
-            polymorphicObj.GetValues();
+            //Console.WriteLine("Child Property value: " + childOne.BaseName);
+            //childOne.CallMethod();
+            //childOne.CallMethod("Henry");
 
-            //Polymorph
-            polymorphicObj.Caller();
+            //ParentClass polymorphicObj = new ChildOne(2,"Ramesh");
+            //polymorphicObj.GetValues();
 
-            //Not a polymorph
-            polymorphicObj.EmptyCaller();
+            ////Polymorph
+            //polymorphicObj.Caller();
 
-            Console.WriteLine("*****************************************************");
-            MyInterface intObj = new ChildTwo();
+            ////Not a polymorph
+            //polymorphicObj.EmptyCaller();
 
-            MyAbstractions absObj = new ChildTwo();
+            //Console.WriteLine("*****************************************************");
+            //MyInterface intObj = new ChildTwo();
 
-            intObj.Caller();
-            intObj.DemoMethod();
+            //MyAbstractions absObj = new ChildTwo();
 
-            absObj.GetNum = 30;
-            Console.WriteLine("Before : "+absObj.GetNum);
+            //intObj.Caller();
+            //intObj.DemoMethod();
 
-            absObj.GetNum = 50;
-            Console.WriteLine("After: "+absObj.GetNum);
+            //absObj.GetNum = 30;
+            //Console.WriteLine("Before : "+absObj.GetNum);
 
-            absObj.PrintStatement();
-            absObj.Print();
+            //absObj.GetNum = 50;
+            //Console.WriteLine("After: "+absObj.GetNum);
 
-            Console.WriteLine("**********************************************************");
+            //absObj.PrintStatement();
+            //absObj.Print();
 
-            PrimaryConstructor prmConst = new("Ada", 29);
-            Console.WriteLine("Name: "+prmConst.Name);
-            Console.WriteLine("Age: "+prmConst.Age);
+            //Console.WriteLine("**********************************************************");
 
-            PrimaryConstructor prmObj = new PrimaryChild("Adam", 25);
-            Console.WriteLine("Name: " + prmObj.Name);
-            Console.WriteLine("Age: " + prmObj.Age);
+            //PrimaryConstructor prmConst = new("Ada", 29);
+            //Console.WriteLine("Name: "+prmConst.Name);
+            //Console.WriteLine("Age: "+prmConst.Age);
 
-            PrimaryConstructor prmObj2 = new PrimaryChild(29, "Bob", 52);
-            Console.WriteLine("Name: "+ prmObj2.Name);
-            Console.WriteLine("Age: " + prmObj2.Age);
+            //PrimaryConstructor prmObj = new PrimaryChild("Adam", 25);
+            //Console.WriteLine("Name: " + prmObj.Name);
+            //Console.WriteLine("Age: " + prmObj.Age);
 
+            //PrimaryConstructor prmObj2 = new PrimaryChild(29, "Bob", 52);
+            //Console.WriteLine("Name: "+ prmObj2.Name);
+            //Console.WriteLine("Age: " + prmObj2.Age);
+
+
+            int[] array = [1, 2, 3, 4, 0];
+
+            int[] array2 = [5,6,8,9,7,1,0];
+            ArrayOperations arrayOperations = new();
+
+            //arrayOperations.InsertAtLastIndex(5, array);
+
+            arrayOperations.InsertAtFirstIndex(8, array2); 
+
+            //arrayOperations.InsertAnyIndex(3, 9, array2);
 
         }
     }
