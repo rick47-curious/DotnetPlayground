@@ -61,13 +61,19 @@ namespace DotnetPlayground
             int[] array = [1, 2, 3, 4, 0];
 
             int[] array2 = [5,6,8,9,7,1,0];
+
+            int[] sampleArray = [4,1,5,8,9,10];
             ArrayOperations arrayOperations = new();
 
             //arrayOperations.InsertAtLastIndex(5, array);
 
-            arrayOperations.InsertAtFirstIndex(8, array2); 
+            //arrayOperations.InsertAtFirstIndex(8, array2); 
 
             //arrayOperations.InsertAnyIndex(3, 9, array2);
+
+           // arrayOperations.DeleteFromEnd(sampleArray);
+           // arrayOperations.DeleteFromFirst(array);
+            //arrayOperations.DeleteFromAnyIndex(5, array2);
 
         }
     }
